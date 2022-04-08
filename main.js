@@ -133,12 +133,7 @@ const server = http.createServer((req, res) => {
             console.log("from for loop :", obj.id);
 
             if (obj.id === parsedUpdateUserData.id) {
-              oldData.completeUserData[key]["id"] = parsedUpdateUserData.id;
-              oldData.completeUserData[key]["name"] = parsedUpdateUserData.name;
-              oldData.completeUserData[key]["email"] =
-                parsedUpdateUserData.email;
-              oldData.completeUserData[key]["password"] =
-                parsedUpdateUserData.password;
+              oldData.completeUserData[key] = parsedUpdateUserData;
 
               updatedOrNot = true;
               // addUserData.completeUserData.push(parsedData);
