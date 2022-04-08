@@ -68,7 +68,7 @@ const server = http.createServer((req, res) => {
     });
   }
   //Login code
-  else if (req.url === "/login") {
+  else if (req.url === "/login" && req.method === "POST") {
     var loginDetails = "";
     req.on("data", (chunk) => {
       loginDetails += chunk.toString();
